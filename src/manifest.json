@@ -1,0 +1,55 @@
+{
+  "name": "CGPT-Backup",
+  "short_name": "CGPT-Backup",
+  "description": "CGPT-Backup",
+  "homepage_url": "http://chrome.google.com/webstore",
+  "version": "0.0.1",
+  "version_name": "0.0.1",
+  "manifest_version": 3,
+  "default_locale": "en",
+  "minimum_chrome_version": "88",
+  "host_permissions": [
+    "*://*.openai.com/"
+  ],
+  "permissions": [
+    "cookies",
+    "identity",
+    "storage",
+    "tabs"
+  ],
+  "icons": {
+    "128": "assets/img/128x128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*"
+      ],
+      "js": [
+        "public.lib.js",
+        "public.scripts.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "CGPT-Backup",
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "assets/img/16x16.png",
+      "24": "assets/img/24x24.png",
+      "32": "assets/img/32x32.png"
+    }
+  },
+  "oauth2": {
+    "client_id": "271828643746-8467p6iap73nskb5viq1esl98lecekbl.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmzbxSb9TZns81mUQfUAVVIaeLaFm17hdzA20ZMbD8eEKNURUXCryB90Bz52PzWXBLm/OdAGPN5ZBmNxvcIsx6d0v3yifVY28JtFqJxw5Hv+BEk2HCixssLt1aNTLXvlrc8n5h6lc1agapjBHEp5O0rn5Nhrwxg9WEtL2sGdab1fzXfBUMc6J6lKWLpZ5/NgGd31rHWrBguP0FBpx4Ch7BB6t5AtdG7NUj9tONnjbFIfnH0/fj01TiK26AVMtvv9z5WxaLV+uaIWH695zvOMOxXQ9M+6G0sAfhJ6TkadP/1yDLu7/Zui5xlnPiHTlrZbXATV97k/SZkjFwvkxsa93ZQIDAQAB"
+}

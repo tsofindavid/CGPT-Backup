@@ -1,0 +1,53 @@
+{
+  "dist": "./dist",
+  "source": "./src",
+  "releases": "./",
+  "release_name": "release",
+  "manifest": "./src/manifest.json",
+  "js": "./src/**/*.js",
+  "js_bundles": [
+    {
+      "name": "background",
+      "src": "./src/background.js"
+    },
+    {
+      "name": "content",
+      "src": [
+        "./src/content.js",
+        "./srs/content/*.js"
+      ]
+    },
+    {
+      "name": "public.lib",
+      "src": [
+        "./src/public/lib/*.js"
+      ]
+    },
+    {
+      "name": "public.scripts",
+      "src": [
+        "./src/public/scripts/*.js"
+      ]
+    }
+  ],
+  "html": "./src/public/*.html",
+  "scss": "./src/public/*.scss",
+  "scss_bundles": [
+    {
+      "src": "./src/**/*.scss",
+      "name": "styles"
+    }
+  ],
+  "assets": [
+    "./assets/**/*",
+    "!./assets/locales",
+    "!./assets/locales/**/*"
+  ],
+  "copyAsIs": [],
+  "locales_dir": "./assets/locales/",
+  "locales_list": [
+    "en"
+  ],
+  "commands": null,
+  "commands_watch_path": null
+}

@@ -1,0 +1,45 @@
+{
+  "name": "CGPT-Backup",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "http://chrome.google.com/webstore",
+  "author": "ENTER YOUR NAME HERE",
+  "repository": {
+    "type": "git",
+    "url": "ENTER GIT REPO URL"
+  },
+  "scripts": {
+    "start": "xt-build -e dev -w --config ./config.json",
+    "start:chrome": "xt-build -e dev -p chrome -w",
+    "build": "xt-build -e prod",
+    "build:chrome": "xt-build --config ./config.json -e prod -p chrome",
+    "clean": "xt-clean",
+    "docs": "xt-docs",
+    "coverage": "nyc --reporter=lcov npm run test",
+    "sync": "xt-sync"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "eslintIgnore": [
+    "test/**/*"
+  ],
+  "devDependencies": {
+    "extension-cli": "latest"
+  },
+  "xtdocs": {
+    "source": {
+      "include": [
+        "README.md",
+        "src"
+      ]
+    }
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "google-auth-library": "^8.8.0",
+    "googleapis": "^118.0.0"
+  }
+}
