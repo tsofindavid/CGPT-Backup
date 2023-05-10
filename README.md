@@ -2,6 +2,16 @@
 
 ## Development
 
+To develop this project run
+
+```bash
+  npm install
+```
+
+```bash
+  npm run dev:<chrome|firefox>
+```
+
 ### Available Commands
 
 | Commands | Description |
@@ -30,6 +40,4 @@ For CLI instructions see [User Guide &rarr;](https://oss.mobilefirst.me/extensio
 **Extension Publishing Guides**
 
 - [Publishing for Chrome](https://developer.chrome.com/webstore/publish)
-- [Publishing for Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/publish-extension)
-- [Publishing for Opera addons](https://dev.opera.com/extensions/publishing-guidelines/)
 - [Publishing for Firefox](https://extensionworkshop.com/documentation/publish/submitting-an-add-on/)
